@@ -1,9 +1,9 @@
+import "../styles/globals.css"
+
 export const metadata = {
   title: "Agency Boilerplate",
   description: "Base template for client projects",
 }
-
-import "../styles/globals.css"
 
 export default function RootLayout({
   children,
