@@ -1,5 +1,5 @@
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
 import {
   Card,
   CardContent,
@@ -16,16 +16,18 @@ export default function Home() {
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-8">
         <div className="space-y-4">
           <Badge variant="outline">Agency Boilerplate</Badge>
+
           <div className="space-y-2">
             <h1 className="text-4xl font-semibold tracking-tight">
               Ready for future client projects
             </h1>
-            <p className="max-w-2xl text-[var(--muted-foreground)]">
+            <p className="max-w-2xl text-[var(--foreground)]/70">
               Base template with reusable UI primitives for landing pages,
               dashboards, and internal tools.
             </p>
           </div>
-          <div className="flex gap-3">
+
+          <div className="flex flex-wrap gap-3">
             <Button>Start project</Button>
             <Button variant="secondary">Documentation</Button>
           </div>
@@ -35,9 +37,10 @@ export default function Home() {
           <CardHeader>
             <CardTitle>Quick contact form example</CardTitle>
             <CardDescription>
-              This block proves the template already includes a usable UI layer.
+              This block shows that the template already includes a usable UI layer.
             </CardDescription>
           </CardHeader>
+
           <CardContent className="flex flex-col gap-4">
             <Input placeholder="Project name" />
             <Input placeholder="Client email" />
