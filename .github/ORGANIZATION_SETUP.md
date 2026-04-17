@@ -34,7 +34,7 @@
 ## Репозиторий-шаблон (этот проект)
 
 - [x] Репозиторий помечен как **Template** (кнопка *Use this template* на главной). — *API: `is_template: true`*
-- [x] **Branch protection** для `main`: изменения через PR, при необходимости обязательный review / статусы CI.
+- [x] **Branch protection** для `main`: изменения через PR, при необходимости обязательный review / статусы CI. В репозитории есть workflow **CI** (`.github/workflows/ci.yml`) — его можно добавить в *Require status checks to pass*.
 
 ## Ссылки
 
