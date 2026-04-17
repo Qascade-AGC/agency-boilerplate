@@ -1,6 +1,10 @@
+import Link from "next/link"
+
+import { auth } from "@/auth"
 import { DbStatus } from "@/components/db-status"
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 import {
   Card,
   CardContent,
@@ -11,7 +15,9 @@ import {
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 
-export default function Home() {
+export default async function Home() {
+  const session = await auth()
+
   return (
     <main className="min-h-screen px-6 py-16">
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-8">
@@ -32,8 +38,18 @@ export default function Home() {
           </div>
 
           <div className="flex flex-wrap gap-3">
-            <Button>Start project</Button>
-            <Button variant="secondary">Documentation</Button>
+            {session ? (
+              <Link
+                href="/dashboard"
+                className={cn(buttonVariants(), "inline-flex")}
+              >
+                Кабинет{session.user?.name ? ` — ${session.user.name}` : ""}
+              </Link>
+            ) : (
+              <Link href="/login" className={cn(buttonVariants(), "inline-flex")}>
+                Войти
+              </Link>
+            )}
           </div>
         </div>
 
