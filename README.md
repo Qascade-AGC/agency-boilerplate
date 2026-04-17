@@ -19,6 +19,7 @@
 - Auth.js (NextAuth v5) + GitHub OAuth, JWT-сессии, защита `/dashboard`
 - CSS (базовые стили)
 - GitHub templates (issues + PR)
+- CI: GitHub Actions — `npm ci` и `npm run build` на push/PR в `main` (`.github/workflows/ci.yml`)
 
 ---
 
