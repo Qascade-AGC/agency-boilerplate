@@ -1,7 +1,18 @@
-export default function Button() {
+type ButtonProps = {
+  children: React.ReactNode
+  variant?: "primary" | "secondary"
+}
+
+export default function Button({
+  children,
+  variant = "primary",
+}: ButtonProps) {
   return (
-    <button className="px-4 py-2 bg-black text-white rounded">
-      Button
+    <button
+      className={`btn ${variant === "secondary" ? "btn-secondary" : "btn-primary"}`}
+      type="button"
+    >
+      {children}
     </button>
   )
 }
