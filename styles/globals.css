@@ -1,3 +1,21 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b0d12;
+  --foreground: #f5f7fb;
+  --card: #121722;
+  --card-foreground: #f5f7fb;
+  --border: #232938;
+  --input: #232938;
+  --primary: #ffffff;
+  --primary-foreground: #0b0d12;
+  --secondary: #171d29;
+  --secondary-foreground: #f5f7fb;
+  --muted: #1b2130;
+  --muted-foreground: #a7b0c0;
+  --radius: 0.875rem;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -8,19 +26,9 @@ body {
   padding: 0;
 }
 
-:root {
-  --bg: #0b0d12;
-  --panel: #121722;
-  --text: #f5f7fb;
-  --muted: #a7b0c0;
-  --line: #232938;
-  --primary: #ffffff;
-  --primary-text: #0b0d12;
-}
-
 body {
   background: radial-gradient(circle at top, #151b29 0%, #0b0d12 50%);
-  color: var(--text);
+  color: var(--foreground);
   font-family: Arial, sans-serif;
 }
 
@@ -29,78 +37,4 @@ input,
 textarea,
 select {
   font: inherit;
-}
-
-.page-shell {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 24px;
-}
-
-.hero {
-  width: 100%;
-  max-width: 760px;
-  background: rgba(18, 23, 34, 0.88);
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  padding: 40px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-}
-
-.badge {
-  display: inline-block;
-  margin-bottom: 16px;
-  padding: 6px 10px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: var(--muted);
-  font-size: 12px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.hero h1 {
-  margin: 0;
-  font-size: 48px;
-  line-height: 1;
-}
-
-.hero p {
-  margin: 16px 0 0;
-  max-width: 560px;
-  color: var(--muted);
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-.actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 28px;
-}
-
-.btn {
-  border: 0;
-  border-radius: 14px;
-  padding: 12px 18px;
-  cursor: pointer;
-  transition: transform 0.15s ease, opacity 0.15s ease;
-}
-
-.btn:hover {
-  transform: translateY(-1px);
-  opacity: 0.95;
-}
-
-.btn-primary {
-  background: var(--primary);
-  color: var(--primary-text);
-}
-
-.btn-secondary {
-  background: transparent;
-  color: var(--text);
-  border: 1px solid var(--line);
 }
