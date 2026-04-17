@@ -1,3 +1,4 @@
+import { DbStatus } from "@/components/db-status"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import {
@@ -15,7 +16,10 @@ export default function Home() {
     <main className="min-h-screen px-6 py-16">
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-8">
         <div className="space-y-4">
-          <Badge variant="outline">Agency Boilerplate</Badge>
+          <div className="flex flex-wrap items-center gap-2">
+            <Badge variant="outline">Agency Boilerplate</Badge>
+            <DbStatus />
+          </div>
 
           <div className="space-y-2">
             <h1 className="text-4xl font-semibold tracking-tight">

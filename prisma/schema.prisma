@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// Минимальная служебная таблица: показывает, что миграции и Prisma работают.
+/// Замените на свои сущности (пользователи, заказы и т.д.).
+model BoilerplateMeta {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String?
+  updatedAt DateTime @updatedAt
+}
