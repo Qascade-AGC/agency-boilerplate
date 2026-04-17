@@ -33,6 +33,7 @@
 - `.env.example`
 - Issue templates
 - PR template
+- Чеклист для настройки **GitHub Organization** — `.github/ORGANIZATION_SETUP.md`; политика уязвимостей — `SECURITY.md`; обновления зависимостей — Dependabot (`.github/dependabot.yml`)
 
 ---
 
